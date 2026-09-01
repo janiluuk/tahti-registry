@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/NuclearPlayer/plugin-registry/master/schema/plugins.schema.json",
-  "title": "Nuclear Plugin Registry",
+  "$id": "https://raw.githubusercontent.com/janiluuk/tahti-registry/master/schema/plugins.schema.json",
+  "title": "Tahti Plugin Registry",
   "description": "Schema for the Nuclear plugin registry index",
   "type": "object",
   "required": [

@@ -1,12 +1,14 @@
 {
-  "name": "plugin-registry",
+  "name": "tahti-registry",
   "version": "1.0.0",
-  "description": "Nuclear plugin registry",
+  "description": "Tahti plugin and theme registry",
   "type": "module",
   "scripts": {
     "validate": "tsx scripts/validate.ts",
     "check-plugins": "tsx scripts/check-plugins.ts",
-    "update-versions": "tsx scripts/update-versions.ts"
+    "update-versions": "tsx scripts/update-versions.ts",
+    "validate-themes": "tsx scripts/validate-themes.ts",
+    "build-theme-index": "tsx scripts/build-theme-index.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",

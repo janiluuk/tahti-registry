@@ -53,4 +53,4 @@ jobs:
       - name: Purge plugins.json cache
         uses: gacts/purge-jsdelivr-cache@v1
         with:
-          url: https://cdn.jsdelivr.net/gh/NuclearPlayer/plugin-registry@master/plugins.json
+          url: https://cdn.jsdelivr.net/gh/janiluuk/tahti-registry@master/plugins.json

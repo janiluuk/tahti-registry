@@ -45,7 +45,7 @@ The `plugin.zip` should contain your built plugin files at the root level.
 
 ## Step 3: Fork and Edit
 
-1. [Fork this repository](https://github.com/NuclearPlayer/plugin-registry/fork)
+1. [Fork this repository](https://github.com/janiluuk/tahti-registry/fork)
 2. Edit `plugins.json` and add your plugin to the `plugins` array:
 
 ```json

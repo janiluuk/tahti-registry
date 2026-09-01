@@ -1,14 +1,17 @@
-name: Update plugin versions
+name: Build Theme Index
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - 'themes/**'
 
 jobs:
-  update:
-    name: Check for new plugin releases
+  build-theme-index:
+    name: Regenerate themes.json
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
 
@@ -30,24 +33,19 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Update versions
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: pnpm tsx scripts/update-versions.ts
+      - name: Build theme index
+        run: pnpm build-theme-index
 
-      - name: Commit and push
-        id: commit
+      - name: Commit if changed
         run: |
+          git diff --quiet themes.json && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add plugins.json
-          git diff --cached --quiet && echo "changed=false" >> "$GITHUB_OUTPUT" && exit 0
-          git commit -m "Update plugin versions"
+          git add themes.json
+          git commit -m "Regenerate themes.json"
           git push
-          echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Purge jsDelivr cache
-        if: steps.commit.outputs.changed == 'true'
         uses: gacts/purge-jsdelivr-cache@v1
         with:
-          url: https://cdn.jsdelivr.net/gh/janiluuk/tahti-registry@master/plugins.json
+          url: https://cdn.jsdelivr.net/gh/janiluuk/tahti-registry@master/themes.json
