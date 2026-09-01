@@ -56,13 +56,13 @@ function checkPlugin(repo: string): string[] {
     return [`Repository ${repo} has no package.json: ${e instanceof Error ? e.message : e}`];
   }
 
-  const nuclear = packageJson.nuclear as Record<string, unknown> | undefined;
-  const categories = nuclear?.categories as string[] | undefined;
-  const category = nuclear?.category as string | undefined;
+  const config = (packageJson.tahti ?? packageJson.nuclear) as Record<string, unknown> | undefined;
+  const categories = config?.categories as string[] | undefined;
+  const category = config?.category as string | undefined;
   if (!categories?.length && !category) {
-    errors.push(`package.json in ${repo} missing nuclear.categories field`);
+    errors.push(`package.json in ${repo} missing tahti.categories (or legacy nuclear.categories) field`);
   } else {
-    console.log(`  ✓ nuclear.categories present`);
+    console.log(`  ✓ tahti.categories present`);
   }
 
   let releaseCount: number;

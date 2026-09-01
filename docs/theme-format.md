@@ -46,7 +46,7 @@ The filename becomes the theme's ID.
 
 ## Submitting
 
-1. **Create your theme file**. See the [Nuclear theming docs](https://docs.nuclearplayer.com/nuclear/theming/themes-advanced) for the theme format
+1. **Create your theme file**. Tahti uses Nuclear's theming system — see the [theming docs](https://docs.nuclearplayer.com/nuclear/theming/themes-advanced) for the theme format
 2. **Fork this repository**
 3. **Add your theme** as a JSON file in the `themes/` directory
 4. **Open a PR**. CI will validate your theme file and check that the index can be regenerated

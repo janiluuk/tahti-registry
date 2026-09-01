@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/janiluuk/tahti-registry/master/schema/themes.schema.json",
   "title": "Tahti Theme Registry",
-  "description": "Schema for the Nuclear theme registry index",
+  "description": "Schema for the Tahti theme registry index",
   "type": "object",
   "required": [
     "version",

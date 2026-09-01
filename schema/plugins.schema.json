@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/janiluuk/tahti-registry/master/schema/plugins.schema.json",
   "title": "Tahti Plugin Registry",
-  "description": "Schema for the Nuclear plugin registry index",
+  "description": "Schema for the Tahti plugin registry index",
   "type": "object",
   "required": [
     "plugins"

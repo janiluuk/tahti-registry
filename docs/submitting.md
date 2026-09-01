@@ -1,12 +1,12 @@
 # Submitting a Plugin
 
-How to add your plugin to the Nuclear registry.
+How to add your plugin to the Tahti registry.
 
 ## Prerequisites
 
 Before submitting, make sure you have:
 
-- [ ] A working Nuclear plugin in a public Github repository
+- [ ] A working Tahti plugin in a public Github repository
 - [ ] A `package.json` that meets [the requirements](requirements.md)
 - [ ] At least one Github Release with a `plugin.zip` asset
 - [ ] A README explaining what your plugin does
@@ -23,13 +23,15 @@ Your plugin repository needs:
   "description": "What your plugin does",
   "author": "Your Name",
   "main": "dist/index.js",
-  "nuclear": {
+  "tahti": {
     "category": "metadata"
   }
 }
 ```
 
-**README.md** that includes a description, feature, screenshots, etc. This is what the users will see in Nuclear.
+`tahti` is the manifest key Tahti reads; `nuclear` is still accepted for plugins published before the Tahti rebrand, but new plugins should use `tahti`.
+
+**README.md** that includes a description, feature, screenshots, etc. This is what the users will see in Tahti.
 
 See [requirements.md](requirements.md) for the full specification.
 
@@ -62,7 +64,7 @@ The `plugin.zip` should contain your built plugin files at the root level.
 
 Important:
 - `id` must match the `name` field in your plugin's `package.json`
-- `category` must match the `nuclear.category` in your `package.json`
+- `category` must match the `tahti.category` (or `nuclear.category`, if using the legacy key) in your `package.json`
 - `addedAt` should be today's date in `YYYY-MM-DD` format
 
 ## Step 4: Submit a Pull Request
@@ -75,6 +77,6 @@ We will review your PR and add it to the registry manually.
 
 ## Updating Your Plugin
 
-You don't need to PR the registry to update your plugin. Create a new release with the updated code and Nuclear will fetch the latest version automatically.
+You don't need to PR the registry to update your plugin. Create a new release with the updated code and Tahti will fetch the latest version automatically.
 
 Only PR the registry if you need to change the plugin's metadata.

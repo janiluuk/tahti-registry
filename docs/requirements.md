@@ -13,13 +13,13 @@ Your plugin's `package.json` must include these fields:
 | `description` | Yes | Short description |
 | `author` | Yes | Your name or GitHub username |
 | `main` | Yes | Entry point (e.g., `dist/index.js`) |
-| `nuclear` | Yes | Nuclear-specific configuration (see below) |
+| `tahti` | Yes | Tahti-specific configuration (see below) |
 
-### The `nuclear` Field
+### The `tahti` Field
 
 ```json
 {
-  "nuclear": {
+  "tahti": {
     "displayName": "Discogs Plugin",
     "category": "metadata",
     "icon": {
@@ -30,6 +30,8 @@ Your plugin's `package.json` must include these fields:
   }
 }
 ```
+
+`nuclear` is still read as a deprecated fallback for plugins published before the Tahti rebrand, but new plugins should use `tahti`.
 
 | Property | Required | Description |
 |----------|----------|-------------|
@@ -48,7 +50,7 @@ Your plugin's `package.json` must include these fields:
   "author": "nukeop",
   "license": "MIT",
   "main": "dist/index.js",
-  "nuclear": {
+  "tahti": {
     "displayName": "Discogs Metadata",
     "category": "metadata"
   }
