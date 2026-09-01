@@ -45,9 +45,3 @@ jobs:
           git commit -m "Update plugin versions"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
-
-      - name: Purge jsDelivr cache
-        if: steps.commit.outputs.changed == 'true'
-        uses: gacts/purge-jsdelivr-cache@v1
-        with:
-          url: https://cdn.jsdelivr.net/gh/janiluuk/tahti-registry@master/plugins.json
