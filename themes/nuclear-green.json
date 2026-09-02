@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "name": "Nuclear Green",
+  "author": "Tahti",
+  "description": "Deep green-black background with a teal signal — the original Nuclear player's dark look.",
+  "tags": ["dark", "nuclear", "green"],
+  "palette": ["#338c77", "#2b6357", "#142621", "#0c1915"],
+  "vars": {
+    "background": "#0c1915",
+    "background-secondary": "#142621",
+    "background-input": "#0a1512",
+    "foreground": "#dadfde",
+    "foreground-secondary": "#8fa39d",
+    "foreground-input": "#dadfde",
+    "primary": "#338c77",
+    "primary-foreground": "#dadfde",
+    "secondary": "#2b6357",
+    "secondary-foreground": "#dadfde",
+    "border": "#435c55",
+    "border-input": "#435c55",
+    "ring": "#338c77"
+  },
+  "dark": {
+    "background": "#0c1915",
+    "background-secondary": "#142621",
+    "background-input": "#0a1512",
+    "foreground": "#dadfde",
+    "foreground-secondary": "#8fa39d",
+    "foreground-input": "#dadfde",
+    "primary": "#338c77",
+    "primary-foreground": "#dadfde",
+    "secondary": "#2b6357",
+    "secondary-foreground": "#dadfde",
+    "border": "#435c55",
+    "border-input": "#435c55",
+    "ring": "#338c77"
+  }
+}

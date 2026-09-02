@@ -205,6 +205,24 @@
       "path": "themes/nord.json"
     },
     {
+      "id": "nuclear-green",
+      "name": "Nuclear Green",
+      "description": "Deep green-black background with a teal signal — the original Nuclear player's dark look.",
+      "author": "Tahti",
+      "tags": [
+        "dark",
+        "nuclear",
+        "green"
+      ],
+      "palette": [
+        "#338c77",
+        "#2b6357",
+        "#142621",
+        "#0c1915"
+      ],
+      "path": "themes/nuclear-green.json"
+    },
+    {
       "id": "ocean-glow",
       "name": "Ocean Glow",
       "description": "Soft pastel blue meets deep neon vibes",
@@ -356,6 +374,24 @@
         "#b58900"
       ],
       "path": "themes/solarized.json"
+    },
+    {
+      "id": "tahti-blue",
+      "name": "Tahti Blue",
+      "description": "Deep ink-blue background with an amber signal and teal accent — the tahti.live pitch palette.",
+      "author": "Tahti",
+      "tags": [
+        "dark",
+        "tahti",
+        "blue"
+      ],
+      "palette": [
+        "oklch(0.68 0.16 55)",
+        "oklch(0.7923 0.13 183.63)",
+        "oklch(0.2264 0.0552 275.84)",
+        "oklch(0.1663 0.0402 274.37)"
+      ],
+      "path": "themes/tahti-blue.json"
     },
     {
       "id": "yorha",
