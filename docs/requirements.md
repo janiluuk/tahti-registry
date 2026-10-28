@@ -21,7 +21,7 @@ Your plugin's `package.json` must include these fields:
 {
   "tahti": {
     "displayName": "Discogs Plugin",
-    "category": "metadata",
+    "categories": ["metadata"],
     "icon": {
       "type": "link",
       "link": "https://example.com/icon.png"
@@ -36,7 +36,7 @@ Your plugin's `package.json` must include these fields:
 | Property | Required | Description |
 |----------|----------|-------------|
 | `displayName` | No | Human-readable name shown to users. Falls back to `name` if not set |
-| `category` | Yes | One of: `streaming`, `metadata`, `lyrics`, `scrobbling`, `ui`, `other` |
+| `categories` | Yes | List of categories, e.g. `["metadata"]`: `streaming`, `metadata`, `lyrics`, `scrobbling`, `ui`, `other`. The single `category` string is still accepted |
 | `icon` | No | Plugin icon. Currently only `{"type": "link", "link": "url"}` is supported |
 | `permissions` | No | Informational list of permissions the plugin uses |
 
@@ -52,7 +52,7 @@ Your plugin's `package.json` must include these fields:
   "main": "dist/index.js",
   "tahti": {
     "displayName": "Discogs Metadata",
-    "category": "metadata"
+    "categories": ["metadata"]
   }
 }
 ```
