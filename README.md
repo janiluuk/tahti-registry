@@ -14,10 +14,19 @@ You don't need to interact with this repository. Browse and install plugins and 
 
 Want to add your plugin to the registry?
 
-1. **Build your plugin**. Tahti is built on Nuclear's plugin system — see the [Nuclear plugin development docs](https://nukeop.gitbook.io/nuclear/)
+1. **Build your plugin**. Start from the [example plugin](#example-plugin) and the [plugin authoring guide](https://github.com/janiluuk/tahti-player/blob/master/packages/docs/plugins/tahti-web-authoring.md)
 2. **Prepare your repository**. Ensure your `package.json` meets [the requirements](docs/requirements.md)
 3. **Create a release**. Publish a Github release with a `plugin.zip` asset
 4. **Submit a PR**. Add your plugin to `plugins.json` following [the submission guide](docs/submitting.md)
+
+### Example plugin
+
+[`examples/tahti-plugin-example`](examples/tahti-plugin-example) is the smallest useful Tahti plugin, kept here as a starting point. It owns one setting and uses the lifecycle hooks the plugin loader expects:
+
+- `package.json` declares the manifest: name, version, entry point, `tahti.categories` and the permissions it uses.
+- `src/index.ts` registers the setting in `onLoad`, reads it in `onEnable` and logs in `onDisable`.
+
+Copy the folder into its own repository, rename the plugin in `package.json`, and replace the body of `src/index.ts`. Its [README](examples/tahti-plugin-example/README.md) shows how to load it locally. The example is not listed in `plugins.json`.
 
 ### Plugin Registry Format
 
